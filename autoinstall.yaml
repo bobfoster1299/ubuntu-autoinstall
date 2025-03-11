@@ -5,8 +5,8 @@ autoinstall:
     search_drivers: true
     id: ubuntu-desktop-minimal
   identity:
-    # hostname: ubuntu-2  # can this be interactive?
-    password: "Passw0rd!"  # should this be hashed?
+    hostname: ubuntu-2  # can this be interactive?
+    password: "$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0"  # "ubuntu"
     username: bob-admin
   locale: en_GB
   keyboard:
