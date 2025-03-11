@@ -5,8 +5,8 @@ autoinstall:
     search_drivers: true
     id: ubuntu-desktop-minimal
   identity:
-    hostname: ubuntu-2  # can this be interactive?
-    password: "$6$exDY1mhS4KUYCE/2$zmn9ToZwTKLhCw.b4/b.ZRTIZM30JZ4QrOQ2aOXJ8yk96xpcCof0kxKwuX1kqLG/ygbJ1f8wxED22bTL4F46P0"  # "ubuntu"
+    # hostname: ubuntu-2  # can this be interactive?
+    password: "$1$cq7JjuxB$jJYmltInwRpm9f5PohwON/"  # "ubuntu"
     username: bob-admin
   locale: en_GB
   keyboard:
@@ -20,14 +20,15 @@ autoinstall:
   storage:
     layout:
       name: lvm
-      password: LUKS_PASSPHRASE  # this enables encryption
+      password: "$1$cq7JjuxB$jJYmltInwRpm9f5PohwON/"  # this enables encryption
+      #password: LUKS_PASSPHRASE  # this enables encryption
   # user-data:
   #   disable_root: true
   packages:
     - vim
   ssh:
     install-server: true
-    # authorized-keys:
-    #   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGg/GT9en+J+Pl+...
-  # late-commands:
-  #   - echo "Installation complete!" > /target/root/installation-log.txt
+    authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGg/GT9en+J+Pl+kHgshE2eIAPOci4CRB9wMIFGfCGxqes/wRahvhWGamiu5r4pNB7LWISPp+KBXyHPI+gohv/52oGQrH0emRVJPmcsF86gpyzJ2cHQN5DhkECSRcsNKMGpfPtQlKTsokdUh4fWv0ile61w4mdEUbQNvPsqbtX+bWdq9yRwEb8+yFahFYKa1/Y536QpQ0uyPmJgQiJtVakc1HWepAXBQuglYan5Oz9IWzMBqmEHvbHxClG/kxyUcVxIF9/5htD3qzUp8DsiVtPd84y9GFvoG2iAthgcHic8C40TyzRtCh60RBEvUW201+OaB10Shwf2WDZBn9eQsw3LZzdhaJ+qcwngVQHhADwGt6/HVb9cS6+qyQWS4+ykCyeTwAiWlX0sYa+ZbFMYinO5HxOVn9iEAfIdLX8Oh8XjNJiEdl3gnoObWxqftvvV0JDeTme3+58tGwLnsqypo53g8/i0NwxVyCqI264Zr2+T5iz3sZ6k4ScwDHVek5WSE0= ansible@HYB-rF9MA5WUwGJ
+  late-commands:
+   - curtin in-target -- systemctl enable ssh 
