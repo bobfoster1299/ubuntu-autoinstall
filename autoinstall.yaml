@@ -31,4 +31,4 @@ autoinstall:
     authorized-keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGg/GT9en+J+Pl+kHgshE2eIAPOci4CRB9wMIFGfCGxqes/wRahvhWGamiu5r4pNB7LWISPp+KBXyHPI+gohv/52oGQrH0emRVJPmcsF86gpyzJ2cHQN5DhkECSRcsNKMGpfPtQlKTsokdUh4fWv0ile61w4mdEUbQNvPsqbtX+bWdq9yRwEb8+yFahFYKa1/Y536QpQ0uyPmJgQiJtVakc1HWepAXBQuglYan5Oz9IWzMBqmEHvbHxClG/kxyUcVxIF9/5htD3qzUp8DsiVtPd84y9GFvoG2iAthgcHic8C40TyzRtCh60RBEvUW201+OaB10Shwf2WDZBn9eQsw3LZzdhaJ+qcwngVQHhADwGt6/HVb9cS6+qyQWS4+ykCyeTwAiWlX0sYa+ZbFMYinO5HxOVn9iEAfIdLX8Oh8XjNJiEdl3gnoObWxqftvvV0JDeTme3+58tGwLnsqypo53g8/i0NwxVyCqI264Zr2+T5iz3sZ6k4ScwDHVek5WSE0= ansible@HYB-rF9MA5WUwGJ
   late-commands:
-   - curtin in-target -- systemctl enable ssh 
+    - curtin in-target -- systemctl enable ssh
