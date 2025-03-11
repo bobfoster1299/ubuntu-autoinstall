@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+  version: 1
+    source:
+    search_drivers: true
+    id: ubuntu-desktop-minimal
+  identity:
+    # hostname: ubuntu-2  # can this be interactive?
+    password: "Passw0rd!"  # should this be hashed?
+    username: bob-admin
+  locale: en_GB
+  keyboard:
+    layout: gb
+  # network:
+  #   network:
+  #     version: 2
+  #     ethernets:
+  #       eth0:
+  #         dhcp4: true
+  storage:
+    layout:
+      name: lvm
+      password: LUKS_PASSPHRASE  # this enables encryption
+  # user-data:
+  #   disable_root: true
+  packages:
+    - vim
+  ssh:
+    install-server: true
+    # authorized-keys:
+    #   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGg/GT9en+J+Pl+...
+  # late-commands:
+  #   - echo "Installation complete!" > /target/root/installation-log.txt
