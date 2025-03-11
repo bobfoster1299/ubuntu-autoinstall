@@ -5,7 +5,7 @@ autoinstall:
     search_drivers: true
     id: ubuntu-desktop-minimal
   identity:
-    hostname: ubuntu-2  # can this be interactive?
+    #hostname: ubuntu-2  # can this be interactive?
     password: "$1$cq7JjuxB$jJYmltInwRpm9f5PohwON/"  # "ubuntu"
     username: bob-admin
   locale: en_GB
