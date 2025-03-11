@@ -1,7 +1,7 @@
-#cloud-config
+---
 autoinstall:
   version: 1
-    source:
+  source:
     search_drivers: true
     id: ubuntu-desktop-minimal
   identity:
